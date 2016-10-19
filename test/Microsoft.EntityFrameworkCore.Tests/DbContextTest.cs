@@ -4730,6 +4730,11 @@ namespace Microsoft.EntityFrameworkCore.Tests
 
         private class ConstructorTestContext1A : DbContext
         {
+            public ConstructorTestContext1A()
+                : base()
+            {
+            }
+
             public ConstructorTestContext1A(DbContextOptions options)
                 : base(options)
             {
